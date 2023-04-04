@@ -4,7 +4,7 @@
   "description": "Interface de linha de comando para consultar sua Carteira de Trabalho Digital.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "build": "npx tsc",
     "start": "node dist/index.js"
   },
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/KaueSabinoSRV17/CPTS-cli#readme",
   "devDependencies": {
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.3",
+    "vitest": "^0.29.8"
   }
 }
