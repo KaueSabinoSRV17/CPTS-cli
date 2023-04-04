@@ -1,14 +1,28 @@
-import puppeteer from 'puppeteer'
+const puppeteer = require('puppeteer-extra')
+import { PuppeteerExtraPluginRecaptcha } from 'puppeteer-extra-plugin-recaptcha'
 
-async function main() {
+export async function main() {
 
+    puppeteer.use
 
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({headless: false})
 
     const page = await browser.newPage()
-    await page.goto('https://www.google.com/')
+    await page.goto('https://servicos.mte.gov.br/spme-v2/#/login', {waitUntil: 'networkidle2'})
 
-    const html = await page.evaluate(() => document.querySelector('html').innerHTML)
+    await page.click('.br-button.primary')
+
+    await page.waitForSelector('#accountId')
+    await page.type('#accountId', '49758458817')
+    await page.click('.button-continuar')
+
+    await page.waitForSelector('#password')
+    await page.type('#password', 'Kaue.Altair.17')
+    await page.click('#submit-button')
+
+    await page.waitForNavigation()
+
+    const html = 'oi'
 
     await browser.close()
     
