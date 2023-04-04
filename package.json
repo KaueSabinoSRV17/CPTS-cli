@@ -1,0 +1,25 @@
+{
+  "name": "cpts-cli",
+  "version": "1.0.0",
+  "description": "Interface de linha de comando para consultar sua Carteira de Trabalho Digital.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaueSabinoSRV17/CPTS-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaueSabinoSRV17/CPTS-cli/issues"
+  },
+  "homepage": "https://github.com/KaueSabinoSRV17/CPTS-cli#readme",
+  "devDependencies": {
+    "typescript": "^5.0.3"
+  }
+}
